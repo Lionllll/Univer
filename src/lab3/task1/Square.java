@@ -1,0 +1,40 @@
+package lab3.task1;
+
+import java.math.*;
+
+public class Square extends Rectangle {
+
+    public Square() {
+        this.filled = false;
+        this.color = "blue";
+        this.width = 1;
+        this.length = 1;
+    }
+
+    public Square(double side) {
+        this.filled = false;
+        this.color = "blue";
+        this.width = side;
+        this.length = side;
+    }
+
+    public Square(double side, String color, boolean filled) {
+        this.color = color;
+        this.filled = filled;
+        this.width = side;
+        this.length = side;
+    }
+
+    public double getSide() { return width; }
+    public void setSide(double side) { this.width = side; this.length = side; }
+
+    @Override
+    public void setWidth(double side) { setSide(side); }
+    @Override
+    public void setLength(double side) { setSide(side); }
+
+    @Override
+    public String toString() {
+        return "Shape: square, side: " + width + ", color: " + color;
+    }
+}

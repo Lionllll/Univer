@@ -1,0 +1,22 @@
+package lab4.task4;
+
+public class Processor {
+    private String model;
+    private double frequency;
+    private int cores;
+
+    public Processor(String model, double frequency, int cores) {
+        this.model = model;
+        this.frequency = frequency;
+        this.cores = cores;
+    }
+
+    public String getModel() { return model; }
+    public double getFrequency() { return frequency; }
+    public int getCores() { return cores; }
+
+    @Override
+    public String toString() {
+        return model + ", " + frequency + " ГГц, " + cores + " ядер";
+    }
+}
